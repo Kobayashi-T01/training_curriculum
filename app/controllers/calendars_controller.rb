@@ -21,7 +21,6 @@ class CalendarsController < ApplicationController
 
     @todays_date = Date.today
     @week_days = []
-
     plans = Plan.where(date: @todays_date..@todays_date + 6)
 
     7.times do |x|
@@ -37,6 +36,5 @@ class CalendarsController < ApplicationController
       @week_days.push(days)
       #end
     end
-
   end
 end
